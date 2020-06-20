@@ -4,11 +4,11 @@ function playSound(e) {
     if(!audio) return; // stop function from running
     audio.currentTime = 0; // rewind to the start
     audio.play();
-    key.classList.add('playing');
+    key.classList.add('playing'); // add the animation to the keys
 };
 
 function removeTransition(e) {
-    // at first we console.log(e) to find out propertyName = 'transform
+    // at first we console.log(e) to find out that propertyName = 'transform'
     if (e.propertyName !== 'transform') return; 
     this.classList.remove('playing');    
 };
